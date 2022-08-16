@@ -18,13 +18,13 @@ nav span {
 
 }
 
-.new-tweet {
+.nav-text-icon {
   display: flex;
   flex-direction: column;
   align-items: center;
 
 }
-.new-tweet p {
+.nav-text-icon p {
   margin-bottom: 0px;
 }
 .fa-solid {
