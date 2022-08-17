@@ -1,6 +1,9 @@
+#tweets-container {
+  width: 50%;
+}
 article.tweet {
   height: 250px;
-  width: 50%;
+  width: 100%;
   border: 2px solid #545149;
   margin-top: 2em;
   display: flex;
