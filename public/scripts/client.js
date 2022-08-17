@@ -74,4 +74,20 @@ $(document).ready(function () {
 
   renderTweets(data);
 
+  
+  $("#tweet-input").submit(function( event ) {
+    event.preventDefault();
+    
+    $.ajax({
+      type: 'POST',
+      url: "/tweets/",
+      data: $(this).serialize(),   
+      success: function(){
+         renderTweets(data);
+      }
+      
+   });
+   
+  });
+
 });
