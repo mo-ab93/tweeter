@@ -46,7 +46,10 @@ $(document).ready(function () {
     return $tweet;
   }
 
-
+  $(".new-tweet").hide();
+  $(".nav-text-icon").click(function() {
+    $(".new-tweet").slideToggle( "slow" );
+  })
 
   const loadTweets = function() {
     $.ajax('http://localhost:8080/tweets', { method: 'GET' })
