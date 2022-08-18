@@ -8,6 +8,7 @@ $(document).ready(function () {
     }
 
   }
+  
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
@@ -61,7 +62,7 @@ $(document).ready(function () {
     event.preventDefault();
     const tweetLength = $("#tweet-text").val().length;
     const remaining = 140 - tweetLength;
-    const emptyInput = $("#tweet-text").val().trim()
+    const emptyInput = $("#tweet-text").val().trim();
     if ( emptyInput === "" || remaining < 0) {
       $(".bar.error").slideDown( "slow" );
       return;
