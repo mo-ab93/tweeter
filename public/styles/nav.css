@@ -31,7 +31,36 @@ nav span {
 
 .fa-solid.fa-angles-down {
   color: red;
-  
+  animation: myAnim 5s ease 0s infinite normal forwards;
+  margin-top: 5px;
+}
+
+@keyframes myAnim {
+  0%,
+  100% {
+    transform: translateY(8px);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translateY(-8px);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: translateY(8px);
+  }
+
+  80% {
+    transform: translateY(6.4px);
+  }
+
+  90% {
+    transform: translateY(-6.4px);
+  }
 }
 
 
