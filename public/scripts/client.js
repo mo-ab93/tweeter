@@ -1,21 +1,27 @@
-$(document).ready(function () {
+$(document).ready(function() {
 
-  const renderTweets = function (tweets) {
+  // Render Tweets
+  const renderTweets = function(tweets) {
     $("#tweets-container").empty();
     for (let tweet of tweets) {
       const result = createTweetElement(tweet);
       $("#tweets-container").prepend(result);
     }
 
-  }
+  };
   
-  const escape = function (str) {
+
+
+  // Cross-Site Scripting
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
-  const createTweetElement = function (tweet) {
+
+  // create new tweet function
+  const createTweetElement = function(tweet) {
     let $tweet = `
 <article class="tweet">
 <header>
@@ -41,44 +47,53 @@ $(document).ready(function () {
 </footer>
 
 </article>
-`
+`;
 
     return $tweet;
-  }
+  };
 
-  $(".new-tweet").hide();
-  $(".nav-text-icon").click(function() {
-    $(".new-tweet").slideToggle( "slow" );
-  })
 
+  // Data fetching
   const loadTweets = function() {
     $.ajax('http://localhost:8080/tweets', { method: 'GET' })
-    .then(function (data) {
-      renderTweets(data);
-    });
-  }
+      .then(function(data) {
+        renderTweets(data);
+      });
+  };
+  
   loadTweets();
 
+
+  // hide error massages
   $(".bar.error").hide();
-  
-  $("#tweet-input").submit(function( event ) {
+
+
+  // Submit new tweet and POST request by Ajax
+  $("#tweet-input").submit(function(event) {
     event.preventDefault();
     const tweetLength = $("#tweet-text").val().length;
     const remaining = 140 - tweetLength;
     const emptyInput = $("#tweet-text").val().trim();
-    if ( emptyInput === "" || remaining < 0) {
-      $(".bar.error").slideDown( "slow" );
+    if (emptyInput === "" || remaining < 0) {
+      $(".bar.error").slideDown("slow");
       return;
     }
-      $.ajax({
-        type: 'POST',
-        url: "/tweets/",
-        data: $(this).serialize(),
-        success: function(){
-          loadTweets();
-        }
-     });
-   
+    $.ajax({
+      type: 'POST',
+      url: "/tweets/",
+      data: $(this).serialize(),
+      success: function() {
+        loadTweets();
+      }
+    });
+    
   });
+  
+});
 
+
+// Toggle arrow
+$(".new-tweet").hide();
+$(".nav-text-icon").click(function() {
+  $(".new-tweet").slideToggle("slow");
 });
