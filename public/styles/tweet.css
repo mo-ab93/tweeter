@@ -1,6 +1,7 @@
 #tweets-container {
   width: 50%;
 }
+
 article.tweet {
   height: 250px;
   width: 100%;
@@ -11,14 +12,16 @@ article.tweet {
   justify-content: center;
   align-items: center;
 }
+
 article.tweet:hover {
   box-shadow: rgba(0, 0, 0, 0.30) 4.5px 4.5px 5.4px;
 }
-article.tweet header{
- background-color: #f4f1ec;
- background-image: none;
- height: 30px;
- width: 95%;
+
+article.tweet header {
+  background-color: #f4f1ec;
+  background-image: none;
+  height: 30px;
+  width: 95%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -29,6 +32,7 @@ article.tweet header{
   padding-left: 0;
   color: #545149;
 }
+
 article.tweet header h4 {
   color: #5451498e;
 }
@@ -36,14 +40,16 @@ article.tweet header h4 {
 article.tweet header div {
   display: flex;
   flex-direction: row;
-  
+
 }
+
 article.tweet header div img {
   height: 50px;
   width: 50px;
   margin-right: 5px;
   margin-top: 10px;
 }
+
 .tweet-content {
   width: 95%;
   padding-top: 50px;
@@ -62,31 +68,36 @@ article.tweet footer {
   justify-content: space-between;
   align-items: center;
 }
+
 article.tweet footer p {
   font-size: medium;
 }
+
 article.tweet footer div .fa-solid {
   font-size: medium;
   color: #4056A1;
   cursor: pointer;
 }
+
 article.tweet footer div .fa-solid:hover {
   color: #b88a00;
 }
 
 
 @media only screen and (min-width: 1024px) {
+
   /* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
   #tweets-container {
     width: 80%;
   }
 }
+
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  
+
   #tweets-container {
     width: 98%;
   }
- 
+
 }
 
 @media only screen and (min-width: 320px) and (max-width: 768px) {

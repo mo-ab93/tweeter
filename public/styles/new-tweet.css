@@ -7,6 +7,7 @@
   align-items: center;
 
 }
+
 form {
   width: 100%;
   display: flex;
@@ -14,6 +15,7 @@ form {
   justify-content: flex-start;
   align-items: flex-start;
 }
+
 label {
   font-size: large;
   font-weight: 600;
@@ -34,6 +36,7 @@ textarea {
   font-size: medium;
   font-weight: 600;
 }
+
 .btn-cout {
   padding-top: 10px;
   width: 100%;
@@ -41,6 +44,7 @@ textarea {
   flex-direction: row;
   justify-content: space-between;
 }
+
 .btn-cout button {
   padding: 3px;
   background-color: #4056A1;
@@ -50,6 +54,7 @@ textarea {
   font-size: medium;
   cursor: pointer;
 }
+
 .btn-cout button:hover {
   box-shadow: #4057a185 0px 5px 15px;
 
@@ -68,6 +73,7 @@ textarea {
   background: #fafafa;
   border: 1px solid #ccc;
 }
+
 .error {
   color: #ba3939;
   background: #ffe0e0;
@@ -76,6 +82,7 @@ textarea {
 }
 
 @media only screen and (min-width: 1024px) {
+
   /* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
   .new-tweet {
     width: 80%;
@@ -88,11 +95,10 @@ textarea {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  
   .new-tweet {
     width: 98%;
   }
- 
+
 }
 
 @media only screen and (min-width: 320px) and (max-width: 768px) {
