@@ -10,3 +10,13 @@ header {
   background-color: #b88a00;
   background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
 }
+
+
+@media only screen and (min-width: 1024px) {
+  /* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
+  header {
+    width: 30%;
+    height: 450px;
+    padding-top: 0;
+  }
+}
