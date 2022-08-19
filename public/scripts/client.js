@@ -51,7 +51,13 @@ $(document).ready(function() {
 
     return $tweet;
   };
+  
 
+  // Toggle arrow
+  $(".new-tweet").hide();
+  $(".nav-text-icon").click(function() {
+    $(".new-tweet").slideToggle("slow");
+  });
 
   // Data fetching
   const loadTweets = function() {
@@ -91,9 +97,3 @@ $(document).ready(function() {
   
 });
 
-
-// Toggle arrow
-$(".new-tweet").hide();
-$(".nav-text-icon").click(function() {
-  $(".new-tweet").slideToggle("slow");
-});
