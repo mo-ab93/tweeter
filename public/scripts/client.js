@@ -51,7 +51,7 @@ $(document).ready(function() {
 
     return $tweet;
   };
-  
+
 
   // Toggle arrow
   $(".new-tweet").hide();
@@ -73,7 +73,7 @@ $(document).ready(function() {
   // hide error massages
   $(".bar.error").hide();
 
-
+  
   // Submit new tweet and POST request by Ajax
   $("#tweet-input").submit(function(event) {
     event.preventDefault();
@@ -92,6 +92,8 @@ $(document).ready(function() {
         loadTweets();
       }
     });
+    $("#tweet-text").val('');
+    $(".counter").val(140);
     
   });
   
