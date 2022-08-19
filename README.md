@@ -7,9 +7,9 @@ Utilizing HTML, CSS, JS, Jquery, Ajax requests and a backend of NodeJS, Express,
 
 ## Screenshots
 
-!["Desktop-vesion"](#)
-!["Tablet-vesion"](#)
-!["SmartPhone-version"](#)
+!["Desktop-vesion"](https://github.com/mo-ab93/tweeter/blob/master/public/images/Desctop-version.png)
+!["Tablet-vesion"](https://github.com/mo-ab93/tweeter/blob/master/public/images/Tablet-version.png)
+!["SmartPhone-version"](https://github.com/mo-ab93/tweeter/blob/master/public/images/Smartphone-version.png)
 
 
 
